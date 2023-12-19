@@ -10,7 +10,7 @@ I have included the following pieces of work:
 (3) Using Chart JS, a JavaScript library that I sued to create some visuals for GDP from some few countries.
 (4) Creating a skyline using HTML and CSS, as part my freecodecamp project work.
 
-To assemble this portfolio, I created the framework using HTML and the rest using Bootstrap 5. 
+To assemble this portfolio, I created the framework using HTML, a little bit of CSS and the rest using Bootstrap 5. 
 
 The project was work hours and days of hard work and dedication to research information and apply some solutions. I would get stuck on every step of the work but resorting to research always yielded the solution. I read the Bootstrap library extensively and apply some templates, cards and code to suit the customer specifications. On average, I slept at 2am!
 The portfolio is deployed at this link here: https://mikemupararano.github.io/Bootstrap-Portfolio/.
@@ -23,53 +23,34 @@ N/A
 The web portfolio does not require any installation and will run on most internet browsers.
 
 ## Usage 
-
-Provide instructions and examples for use. Include screenshots as needed. 
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-```md
-![alt text](assets/images/screenshot.png)
-```
-
+To have an idea of what is in the portfolio including screenshots, please click on this link: https://github.com/Mikemupararano/Bootstrap-Portfolio/issues/1.
 
 ## Credits
-
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+I used the following web-links for research and support:
+(1) For CSS code and bootstrap code links: https://getbootstrap.com/docs/5.3/getting-started/introduction/
+(2) Bootstrap 5 icons: https://icons.getbootstrap.com/
+(3) I used the templates from this link to create tables and columns for my contact me section; https://getbootstrap.com/docs/5.3/layout/columns/#how-they-work
+(4) For the grid, in the work section, I used these templates: https://getbootstrap.com/docs/5.3/layout/grid/#example
+(5) The cards were designed using the following templates from this page: https://getbootstrap.com/docs/5.3/components/card/#about
+(6) The following stack overflow link was useful in informing me how to add the images to github and answered several of my questions on adding features to cards: https://stackoverflow.com/questions/23596369/how-to-upload-images-like-png-into-github-repository
+(7) I had watched the following video and even created my own online school website using bootstrap and the ideas on this video link: https://www.youtube.com/watch?v=4sosXZsdy-s.
 
 
 ## License
 
-The last section of a good README is a license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, use [https://choosealicense.com/](https://choosealicense.com/)
-
-
----
-
+See the Bootstrap-Portfolio repository for any information on the MIT license.
 🏆 The sections listed above are the minimum for a good README, but your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
 
 ## Badges
-
-![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
-
-Badges aren't _necessary_, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
+N/A
 ## Features
 
-If your project has a lot of features, consider adding a heading called "Features" and listing them there.
-
+N/A
 ## Contributing
 
-If you created an application or package and would like other developers to contribute it, you will want to add guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own.
+Any other contributors are welcome to contact me and add to my code or suggest improvements.
 
 ## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them.
-
----
-
+N/A
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
 
