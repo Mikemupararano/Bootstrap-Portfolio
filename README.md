@@ -14,14 +14,10 @@ https://mikemupararano.github.io/Bootstrap-Portfolio/
 
 ## 📸 Screenshots
 
-### Desktop
-![Desktop](images/screenshot-home.png)
 
 ### Projects Section
-![Projects](images/screenshot-projects.png)
+![Projects](images/bootstrap-portfolio.png)
 
-### Mobile View
-![Mobile](images/screenshot-mobile.png)
 
 ## Built With
 
