@@ -1,7 +1,72 @@
-* {
+/* ========== Reset ========== */
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
-/*Removed bullet points from skills list*/
-ul {
+
+/* ========== Design Tokens ========== */
+:root {
+    --primary: #0d6efd;
+    --accent: #ffc107;
+    --shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+
+    /* Theme tokens */
+    --bg: #ffffff;
+    --text: #212529;
+    --surface: #f8f9fa;
+}
+
+/* Auto Dark Mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0b1220;
+        --text: #e6eaf0;
+        --surface: #111a2e;
+        --shadow: 0 .5rem 1rem rgba(0, 0, 0, .55);
+    }
+}
+
+/* ========== Base Styles ========== */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* ========== Lists ========== */
+.skills-list {
     list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+/* ========== Components ========== */
+.card-img-top {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+/* Card interaction */
+.card {
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+/* ========== Layout Fixes ========== */
+section {
+    scroll-margin-top: 90px;
+}
+
+/* ========== Accessibility ========== */
+:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
 }
