@@ -1,3 +1,5 @@
+/* css/style.css */
+
 /* ========== Reset ========== */
 *,
 *::before,
@@ -15,6 +17,12 @@
     --bg: #ffffff;
     --text: #212529;
     --surface: #f8f9fa;
+
+    /* Layout constants */
+    --nav-h: 56px;
+    /* Bootstrap default navbar height */
+    --footer-h: 72px;
+    /* fixed footer height */
 }
 
 /* Auto Dark Mode */
@@ -35,19 +43,33 @@ html {
 body {
     background: var(--bg);
     color: var(--text);
+
+    /* Prevent fixed footer from covering/truncating content */
+    padding-bottom: calc(var(--footer-h) + 24px);
 }
 
-/* ========== Lists ========== */
-.skills-list {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 0;
+/* ========== Hero (Landing) ========== */
+/* Ensures the footer is visible on the landing view by sizing hero to the space
+   between navbar + footer. */
+.hero-section {
+    min-height: calc(100vh - var(--nav-h) - var(--footer-h));
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, var(--surface), var(--bg));
+    color: var(--text);
 }
 
 /* ========== Components ========== */
-.card-img-top {
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
+/* Project screenshot previews: show full image (no cropping) */
+img.card-img-top {
+    height: 260px;
+    width: 100%;
+    object-fit: contain;
+    background: #ffffff;
+    padding: 10px;
+
+    /* Override any previous aspect-ratio rules */
+    aspect-ratio: auto !important;
 }
 
 /* Card interaction */
@@ -60,13 +82,84 @@ body {
     box-shadow: var(--shadow);
 }
 
+/* Sticky Work heading */
+.sticky-work-title {
+    position: sticky;
+    top: calc(var(--nav-h) + 14px);
+    /* keep below navbar */
+    z-index: 10;
+    padding: .5rem 0;
+    background: var(--surface);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+/* Fixed footer */
+.fixed-footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1030;
+    min-height: var(--footer-h);
+    display: flex;
+    align-items: center;
+}
+
 /* ========== Layout Fixes ========== */
 section {
-    scroll-margin-top: 90px;
+    scroll-margin-top: calc(var(--nav-h) + 24px);
+}
+
+/* Remove the thin 1px seam some browsers show between hero and first section */
+#work {
+    border-top: 0;
 }
 
 /* ========== Accessibility ========== */
 :focus-visible {
     outline: 3px solid var(--accent);
     outline-offset: 3px;
+}
+
+/* ========== Navbar Readability Fix ========== */
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff;
+    opacity: 1;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+    color: var(--accent);
+}
+
+/* Optional: active link styling */
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* ========== Pagination Theme ========== */
+.pagination .page-link {
+    color: var(--primary);
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+}
+
+/* ========== Back-to-top Button (if you add it) ========== */
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: calc(var(--footer-h) + 20px);
+    z-index: 2000;
+    border-radius: 999px;
+    padding: 10px 14px;
+    display: none;
+}
+
+#work {
+    scroll-margin-top: calc(var(--nav-h) + 18px);
 }

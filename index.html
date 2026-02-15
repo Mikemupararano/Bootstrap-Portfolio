@@ -7,6 +7,8 @@
 
   <title>MT Bootstrap Portfolio</title>
 
+  <meta name="color-scheme" content="light dark" />
+
   <!-- Bootstrap CSS -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -17,8 +19,6 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
   />
   <link rel="stylesheet" href="./css/style.css" />
-  <meta name="color-scheme" content="light dark">
-
 </head>
 
 <body>
@@ -26,7 +26,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
     <div class="container">
       <a class="navbar-brand fw-semibold" href="#top" aria-label="Go to top">
-        M<i class="bi bi-stack mx-1" aria-hidden="true"></i>T Web Developer Portfolio
+        M<i class="bi bi-stack mx-1" aria-hidden="true"></i>T Bootstrap Portfolio
       </a>
 
       <button
@@ -38,7 +38,7 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon" aria-hidden="true"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -63,20 +63,23 @@
 
   <main id="top">
     <!-- Hero -->
-    <header class="bg-success text-white pt-5">
-      <!-- offset for fixed navbar -->
-      <div class="container py-5">
+    <header class="hero-section d-flex align-items-center">
+      <div class="container py-4">
         <div class="row align-items-center g-4">
           <div class="col-lg-7">
             <h1 id="about-me" class="display-5 fw-bold">
-              I am Mike Thomas <span class="text-warning">Web Developer</span>
+              I am Mike Thomas <span class="text-warning">Full-Stack Developer</span>
             </h1>
-            <p class="lead mt-3">
-              This website showcases my work as a front-end web developer. I design fully functional
-              web applications using HTML, CSS, Bootstrap, JavaScript, React and Node.js. You may
-              also see samples of data science work completed using Power BI, Chart.js, Matplotlib
-              and Python.
+
+            <p class="lead mt-3 text-body">
+              I design and build responsive, production-ready web applications using modern
+              technologies including HTML, CSS, JavaScript, React, Node.js, and Bootstrap. I also
+              develop data science projects using Python, Power BI, Chart.js, and Matplotlib.
             </p>
+
+            <button id="viewProjectsBtn" type="button" class="btn btn-warning btn-lg mt-3 fw-semibold">
+              View Projects ↓
+            </button>
           </div>
 
           <div class="col-lg-5 text-lg-end">
@@ -91,109 +94,16 @@
       </div>
     </header>
 
-    <!-- Work -->
-    <section class="py-5 bg-light" id="work">
+    <!-- Work (Paginated) -->
+    <section class="pt-0 pb-5 bg-light" id="work">
       <div class="container">
-        <h2 class="text-center mb-4">Work</h2>
+        <h2 class="text-center mb-4 sticky-work-title">Work</h2>
 
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-          <!-- Card 1 -->
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <a href="https://github.com/Mikemupararano" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="./images/project 2.png"
-                  class="card-img-top"
-                  alt="Piano design created with HTML and CSS."
-                  loading="lazy"
-                />
-              </a>
-              <div class="card-body">
-                <p class="card-text lead mb-0">
-                  In this project, I used HTML and CSS only to design and style a piano.
-                </p>
-              </div>
-              <div class="card-footer bg-white border-0">
-                <span class="fw-semibold text-success">
-                  Read More <i class="bi bi-chevron-right" aria-hidden="true"></i>
-                </span>
-              </div>
-            </div>
-          </div>
+        <div id="projectsGrid" class="row row-cols-1 row-cols-md-2 g-4"></div>
 
-          <!-- Card 2 -->
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <a href="https://github.com/Mikemupararano" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="./images/project3.png"
-                  class="card-img-top"
-                  alt="Online clothing shop design using HTML and CSS."
-                  loading="lazy"
-                />
-              </a>
-              <div class="card-body">
-                <p class="card-text lead mb-0">
-                  I used HTML and CSS to design and style an online shop for selling clothes.
-                </p>
-              </div>
-              <div class="card-footer bg-white border-0">
-                <span class="fw-semibold text-success">
-                  Read More <i class="bi bi-chevron-right" aria-hidden="true"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <a href="https://github.com/Mikemupararano" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="./images/project5.png"
-                  class="card-img-top"
-                  alt="Doughnut chart created with Chart.js."
-                  loading="lazy"
-                />
-              </a>
-              <div class="card-body">
-                <p class="card-text lead mb-0">
-                  This project visualises GDP data for countries such as Rhodesia, Zimbabwe, Botswana
-                  and Mozambique using Chart.js.
-                </p>
-              </div>
-              <div class="card-footer bg-white border-0">
-                <span class="fw-semibold text-success">
-                  Read More <i class="bi bi-chevron-right" aria-hidden="true"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <a href="https://github.com/Mikemupararano" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="./images/skyline.png"
-                  class="card-img-top"
-                  alt="City skyline design created with HTML and CSS."
-                  loading="lazy"
-                />
-              </a>
-              <div class="card-body">
-                <p class="card-text lead mb-0">
-                  In this project, I used HTML and CSS only to design and style a city skyline.
-                </p>
-              </div>
-              <div class="card-footer bg-white border-0">
-                <span class="fw-semibold text-success">
-                  Read More <i class="bi bi-chevron-right" aria-hidden="true"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <nav class="mt-4" aria-label="Projects pagination">
+          <ul id="projectsPagination" class="pagination justify-content-center mb-0"></ul>
+        </nav>
       </div>
     </section>
 
@@ -227,8 +137,9 @@
               >
                 <i class="bi bi-linkedin" aria-hidden="true"></i>
               </a>
+
               <a
-                href="https://www.linkedin.com/in/mike-thomas-4a4b84287/"
+                href="https://www.facebook.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -236,8 +147,9 @@
               >
                 <i class="bi bi-facebook" aria-hidden="true"></i>
               </a>
+
               <a
-                href="https://www.linkedin.com/in/mike-thomas-4a4b84287/"
+                href="https://x.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="X / Twitter"
@@ -252,15 +164,150 @@
     </section>
   </main>
 
-  <footer class="bg-success text-warning py-4">
+  <!-- Fixed footer (always visible) -->
+  <footer class="bg-success text-warning py-3 fixed-footer">
     <div class="container text-center">
-      <p class="lead mb-0">
-        Copyright &copy; 2024 M<i class="bi bi-stack mx-1" aria-hidden="true"></i>T Web Designs
+      <p class="mb-0">
+        Copyright © <span id="year"></span> M<i class="bi bi-stack mx-1" aria-hidden="true"></i>T Web Designs
       </p>
     </div>
   </footer>
 
-  <!-- Bootstrap JS (bundle includes Popper) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // --- Projects data ---
+    const projects = [
+      {
+        title: "HTML/CSS Piano",
+        description: "Built and styled a piano using only HTML and CSS.",
+        image: "./images/project 2.png",
+        alt: "Piano design created with HTML and CSS.",
+        link: "https://github.com/Mikemupararano"
+      },
+      {
+        title: "Suzana Designs Shop",
+        description: "Designed and styled an online clothing shop using HTML and CSS.",
+        image: "./images/project3.png",
+        alt: "Online clothing shop design using HTML and CSS.",
+        link: "https://github.com/Mikemupararano"
+      },
+      {
+        title: "GDP Visualisation",
+        description: "Visualised GDP data for selected countries using Chart.js.",
+        image: "./images/project5.png",
+        alt: "Doughnut chart created with Chart.js.",
+        link: "https://github.com/Mikemupararano"
+      },
+      {
+        title: "City Skyline",
+        description: "Created a city skyline using only HTML and CSS.",
+        image: "./images/skyline.png",
+        alt: "City skyline design created with HTML and CSS.",
+        link: "https://github.com/Mikemupararano"
+      }
+    ];
+
+    // Set to 2 if you want pagination while you only have 4 projects.
+    const PAGE_SIZE = 4;
+    let currentPage = 1;
+
+    const gridEl = document.getElementById("projectsGrid");
+    const pagerEl = document.getElementById("projectsPagination");
+
+    function renderProjects(page) {
+      const start = (page - 1) * PAGE_SIZE;
+      const pageItems = projects.slice(start, start + PAGE_SIZE);
+
+      gridEl.innerHTML = pageItems.map(p => `
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <a href="${p.link}" target="_blank" rel="noopener noreferrer">
+              <img src="${p.image}" class="card-img-top" alt="${p.alt}" loading="lazy">
+            </a>
+            <div class="card-body">
+              <h3 class="h5">${p.title}</h3>
+              <p class="card-text mb-0">${p.description}</p>
+            </div>
+            <div class="card-footer bg-white border-0">
+              <a class="text-success fw-semibold text-decoration-none"
+                 href="${p.link}" target="_blank" rel="noopener noreferrer">
+                Read More <i class="bi bi-chevron-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    function renderPagination(page) {
+      const totalPages = Math.ceil(projects.length / PAGE_SIZE);
+
+      if (totalPages <= 1) {
+        pagerEl.innerHTML = "";
+        return;
+      }
+
+      const isDisabled = (cond) => (cond ? " disabled" : "");
+      const isActive = (p) => (p === page ? " active" : "");
+
+      let html = `
+        <li class="page-item${isDisabled(page === 1)}">
+          <button type="button" class="page-link" data-page="${page - 1}" aria-label="Previous">Prev</button>
+        </li>
+      `;
+
+      for (let p = 1; p <= totalPages; p++) {
+        html += `
+          <li class="page-item${isActive(p)}">
+            <button type="button" class="page-link" data-page="${p}">${p}</button>
+          </li>
+        `;
+      }
+
+      html += `
+        <li class="page-item${isDisabled(page === totalPages)}">
+          <button type="button" class="page-link" data-page="${page + 1}" aria-label="Next">Next</button>
+        </li>
+      `;
+
+      pagerEl.innerHTML = html;
+
+      pagerEl.querySelectorAll("button.page-link").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const total = Math.ceil(projects.length / PAGE_SIZE);
+          const next = Number(btn.dataset.page);
+          if (!Number.isFinite(next) || next < 1 || next > total) return;
+
+          currentPage = next;
+          renderProjects(currentPage);
+          renderPagination(currentPage);
+
+          // keep section aligned below navbar after page change
+          scrollToSectionWithOffset("work");
+        });
+      });
+    }
+
+    function scrollToSectionWithOffset(id) {
+      const target = document.getElementById(id);
+      const nav = document.querySelector(".navbar");
+      const navH = nav ? nav.getBoundingClientRect().height : 0;
+      const y = target.getBoundingClientRect().top + window.pageYOffset - navH - 12;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+
+    // View Projects button: scroll with correct offset so navbar doesn't cover Work heading
+    document.getElementById("viewProjectsBtn").addEventListener("click", () => {
+      scrollToSectionWithOffset("work");
+    });
+
+    // Initial render
+    renderProjects(currentPage);
+    renderPagination(currentPage);
+
+    // Auto-update year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
