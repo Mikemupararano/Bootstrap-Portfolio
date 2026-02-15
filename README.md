@@ -75,6 +75,9 @@ Simply open the live link above or clone the repository and open index.html loca
 git clone https://github.com/mikemupararano/Bootstrap-Portfolio.git
 cd Bootstrap-Portfolio
 
+To run it, use: 
+python -m http.server
+
 ## ✨ Features
 
 * **Responsive Design** — Fully optimised for desktop, tablet, and mobile devices using Bootstrap’s grid system.
